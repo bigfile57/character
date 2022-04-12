@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천하제일캐릭터대회_이원형</title>
+    <style>
+        *,
+        *:after,
+        *:before{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: skyblue;
+        }
+        .bird{
+            position: relative;
+            top: 100px;
+            margin: 50px auto;
+            width: 600px;
+            height: 580px;
+        }
+        .bird .bird_head{
+            position: absolute;
+            background-color: white;
+            border: 10px solid black;
+            border-radius:49%;
+            width: 500px;
+            height: 590px;
+            transform: rotate(6deg);
+            left: 136px;
+            bottom: 20px;
+            z-index: 1;
+        }
+        .bird .face{
+            position: absolute;
+            background-color: white;
+            border-radius:49%;
+            width: 493px;
+            height: 220px;
+            transform: rotate(6deg);
+            left: 136px;
+            bottom: 175px;
+            z-index: 4;
+        }
+        .bird .bird_body {
+            position: absolute;
+            background-color: white;
+            border: 10px solid black;
+            top: 190px;
+            bottom: 0px;
+            width: 700px;
+            height: 550px;
+            border-radius:50%;
+            z-index: 2;
+        }
+        .bird .bird_left_eye{
+            position: absolute;
+            left: 189px;
+            top: 87px;
+            background-color: black;
+            width: 9px;
+            height: 56px;
+            transform: rotate(23deg);
+            z-index: 3px;
+        }
+        .bird .bird_right_eye{
+            position: absolute;
+            left: 321px;
+            top: 135px;
+            background-color: black;
+            width: 9px;
+            height: 56px;
+            transform: rotate(23deg);
+            z-index: 3px;
+        }
+        .mouse_top{
+            position: relative;
+            left: 209px;
+            bottom: 30px;
+            width: 60px;
+            height: 30px;
+            border-bottom: solid 30px rgb(200,30,50);
+            border-left: solid 30px transparent;
+            border-right: solid 30px transparent;
+            border-radius: 40%;
+            transform: rotate(23deg);
+        }
+        .mouse_bottom{
+            position: relative;
+            left: 212px;
+            bottom: 36px;
+            width: 5px;
+            height: 20px;
+            border-top: solid 19px rgb(200,30,50);
+            border-left: solid 20px transparent;
+            border-right: solid 17px transparent;
+            transform: rotate(23deg);
+        }
+        .bird_left_hand{
+            position: absolute;
+            border: 10px black solid;
+            background-color: white;
+            width: 337px;
+            height: 144px;
+            top: 285px;
+            left: 50px;
+            border-radius: 61px 8px 137px 76px;
+            transform: rotate(27deg);
+            z-index: 6;
+        }
+        .bird_right_hand{
+            position: absolute;
+            border: 10px black solid;
+            background-color: white;
+            width: 337px;
+            height: 144px;
+            top: 230px;
+            left: 513px;
+            border-radius: 61px 8px 137px 76px;
+            transform: rotate(-60deg);
+            z-index: 6;
+        }
+        .bird_left_foot{
+            position: absolute;
+            top: 488px;
+            left: 121px;
+            width: 6px;
+            height: 80px;
+            background-color: yellow;
+            transform: rotate(32deg);
+        }
+        .bird_right_foot{
+            position: absolute;
+            top: 540px;
+            left: 334px;
+            width: 6px;
+            height: 80px;
+            background-color: yellow;
+        }
+        .foot{
+            position: absolute;
+            width: 6px;
+            height: 38px;
+            top: 40px;
+            background-color: yellow;
+        }
+        .right{
+            transform: rotate(-37deg);
+            right: -13px;
+        }
+        .left{
+            transform: rotate(37deg);
+            left: -13px;
+        }
+        .hand1{
+            position: absolute;
+            width: 108px;
+            height: 10px;
+            top: 20px;
+            left: 209px;
+            background-color: black;
+        }
+        .hand2{
+            position: absolute;
+            width: 99px;
+            height: 10px;
+            top: 48px;
+            left: 210px;
+            background-color: black;
+        }
+        .hand3{
+            position: absolute;
+            width: 83px;
+            height: 10px;
+            top: 75px;
+            left: 209px;
+            background-color: black;
+        }
+        .book{
+            position: absolute;
+            top: 289px;
+            left: 229px;
+            width: 200px;
+            height: 244px;
+            background: url('./책.jpg');
+            background-size:contain;
+            z-index: 5;
+            transform: rotate(25deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="bird">
+        <div class="bird_head">
+            <div class="bird_left_eye"></div>
+            <div class="bird_right_eye"></div>
+        </div>
+        <div class="face">
+            <div class="mouse_top"></div>
+            <div class="mouse_bottom"></div>
+        </div>
+        <div class="bird_left_hand">
+            <div class="hand1"></div>
+            <div class="hand2"></div>
+            <div class="hand3"></div>
+        </div>
+        <div class="book"></div>
+        <div class="bird_right_hand">
+            <div class="hand1"></div>
+            <div class="hand2"></div>
+            <div class="hand3"></div>
+        </div>
+        <div class="bird_body">
+            <div class="bird_left_foot">
+                <div class="foot left"></div>
+                <div class="foot right"></div>
+            </div>
+            <div class="bird_right_foot">
+                <div class="foot left"></div>
+                <div class="foot right"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
